@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f0f7fc;
+    color: #16324a;
+    padding-bottom: 60px;
+}
+
+.upload-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(30, 90, 140, 0.07);
+}
+
+.logo { font-size: 1.3rem; font-weight: 700; color: #16324a; }
+.logo span { color: #2f8fdb; }
+
+.btn-cancel {
+    background: none;
+    border: 1px solid #d9e9f5;
+    color: #3d6683;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-cancel:hover {
+    background-color: #eaf3fb;
+    color: #16324a;
+}
+
+/* Core Form Content Layout Card */
+.upload-container {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.upload-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(30, 90, 140, 0.06);
+    border: 1px solid #e5f0fa;
+}
+
+.upload-card h2 {
+    font-size: 1.6rem;
+    color: #16324a;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #5b7a92;
+    margin-bottom: 30px;
+}
+
+/* Structural Fields */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #3d6683;
+    margin-bottom: 8px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #cfe3f2;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #16324a;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2f8fdb;
+    box-shadow: 0 0 0 3px rgba(47, 143, 219, 0.12);
+}
+
+/* Custom Inline Condition Selectors */
+.condition-options {
+    display: flex;
+    gap: 20px;
+    margin-top: 5px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 500 !important;
+    color: #16324a !important;
+}
+
+.radio-label input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Submit Action Button */
+.btn-submit-listing {
+    width: 100%;
+    background-color: #2f8fdb;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(47, 143, 219, 0.28);
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+
+.btn-submit-listing:hover {
+    background-color: #2472ad;
+}

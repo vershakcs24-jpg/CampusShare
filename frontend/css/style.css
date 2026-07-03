@@ -1,0 +1,371 @@
+
+
+.hidden { display: none !important; }
+
+.img-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background: #eaf3fb;
+    color: #8fb3cf;
+}
+.img-placeholder .ph-icon { font-size: 2.2rem; line-height: 1; }
+.img-placeholder .ph-text { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.02em; }
+
+
+.cs-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 35, 55, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1000;
+    animation: cs-fade-in 0.15s ease;
+}
+
+@keyframes cs-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.cs-modal {
+    background: #ffffff;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 50px rgba(20, 60, 100, 0.22);
+    animation: cs-slide-up 0.2s ease;
+}
+
+.cs-modal.cs-modal-sm { max-width: 400px; }
+
+@keyframes cs-slide-up {
+    from { transform: translateY(16px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.cs-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e5f0fa;
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    border-radius: 16px 16px 0 0;
+}
+
+.cs-modal-header h3 {
+    font-size: 1.15rem;
+    color: #16324a;
+}
+
+.cs-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    line-height: 1;
+    color: #5b7a92;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background 0.15s;
+}
+.cs-modal-close:hover { background: #eaf3fb; color: #16324a; }
+
+.cs-modal-body { padding: 22px 24px; }
+
+.cs-modal-footer {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    padding: 16px 24px 22px;
+}
+
+
+.cs-modal .form-group { margin-bottom: 18px; }
+.cs-modal .form-group:last-child { margin-bottom: 0; }
+
+.cs-modal .form-group label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #3d6683;
+    margin-bottom: 7px;
+}
+
+.cs-modal .form-group input[type="text"],
+.cs-modal .form-group input[type="number"],
+.cs-modal .form-group input[type="email"],
+.cs-modal .form-group input[type="tel"],
+.cs-modal .form-group input[type="password"],
+.cs-modal .form-group select,
+.cs-modal .form-group textarea {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1.5px solid #cfe3f2;
+    border-radius: 8px;
+    font-size: 0.92rem;
+    color: #16324a;
+    outline: none;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    background: #fff;
+}
+
+.cs-modal .form-group input:disabled {
+    background: #f5f9fc;
+    color: #a9c3d6;
+    cursor: not-allowed;
+}
+
+.cs-modal .form-group input:focus,
+.cs-modal .form-group select:focus,
+.cs-modal .form-group textarea:focus {
+    border-color: #2f8fdb;
+    box-shadow: 0 0 0 3px rgba(47, 143, 219, 0.12);
+}
+
+.cs-modal .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.cs-field-hint {
+    display: block;
+    font-size: 0.78rem;
+    color: #8fb3cf;
+    margin-top: 5px;
+}
+
+.cs-field-error {
+    display: block;
+    font-size: 0.82rem;
+    color: #e53e3e;
+    margin-top: 6px;
+    min-height: 1em;
+}
+
+/* ---------------- Buttons ---------------- */
+.cs-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.15s ease;
+}
+.cs-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.cs-btn-primary { background: #2f8fdb; color: #fff; }
+.cs-btn-primary:hover:not(:disabled) { background: #2472ad; }
+
+.cs-btn-teal { background: #2f8fdb; color: #fff; }
+.cs-btn-teal:hover:not(:disabled) { background: #2472ad; }
+
+.cs-btn-secondary { background: #eaf3fb; color: #3d6683; }
+.cs-btn-secondary:hover:not(:disabled) { background: #d9e9f5; }
+
+.cs-btn-danger { background: #e53e3e; color: #fff; }
+.cs-btn-danger:hover:not(:disabled) { background: #c53030; }
+
+.cs-link-btn {
+    background: none;
+    border: none;
+    color: #2f8fdb;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+}
+.cs-link-btn:hover { text-decoration: underline; }
+
+.btn-toggle-sold {
+    background: #2f8fdb;
+    color: #ffffff;
+    border-color: #2f8fdb;
+}
+.btn-toggle-sold.is-sold {
+    background: #fdf2f2;
+    color: #c0392b;
+    border-color: #f3d4d4;
+}
+
+
+.cs-avatar-upload {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+.cs-avatar-preview {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #eaf3fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: #5b7a92;
+    flex-shrink: 0;
+}
+.cs-avatar-preview img { width: 100%; height: 100%; object-fit: cover; }
+
+.cs-image-upload-preview {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #eaf3fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8fb3cf;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    border: 1.5px dashed #cfe3f2;
+}
+.cs-image-upload-preview img { width: 100%; height: 100%; object-fit: contain; }
+
+
+.cs-multi-image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 10px;
+    margin-bottom: 6px;
+}
+.cs-multi-image-tile {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #eaf3fb;
+    border: 1.5px solid #d9e9f5;
+}
+.cs-multi-image-tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cs-multi-image-tile .cs-multi-image-main-tag {
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    background: rgba(47, 143, 219, 0.92);
+    color: #fff;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.cs-multi-image-tile .cs-multi-image-remove {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(22, 50, 74, 0.7);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cs-multi-image-tile .cs-multi-image-remove:hover { background: #c53030; }
+
+.cs-multi-image-add {
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    border: 1.5px dashed #cfe3f2;
+    background: #f5f9fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    cursor: pointer;
+    color: #5b7a92;
+    transition: all 0.15s ease;
+}
+.cs-multi-image-add:hover { border-color: #2f8fdb; color: #2f8fdb; background: #eaf3fb; }
+.cs-multi-image-add-icon { font-size: 1.5rem; }
+.cs-multi-image-add-text { font-size: 0.65rem; font-weight: 600; text-align: center; padding: 0 4px; }
+.cs-multi-image-add input[type="file"] { display: none; }
+
+
+.cs-progress-wrap {
+    width: 100%;
+    height: 8px;
+    background: #e5f0fa;
+    border-radius: 99px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+.cs-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #6fc1f2, #2f8fdb);
+    border-radius: 99px;
+    transition: width 0.2s ease;
+}
+.cs-progress-label {
+    font-size: 0.8rem;
+    color: #5b7a92;
+    margin-top: 6px;
+    text-align: center;
+}
+
+
+#cs-toast-stack {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1200;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 320px;
+}
+
+.cs-toast {
+    background: #16324a;
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    animation: cs-toast-in 0.2s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+.cs-toast.cs-toast-success { background: #1f7a4d; }
+.cs-toast.cs-toast-error { background: #c53030; }
+.cs-toast.cs-toast-info { background: #2472ad; }
+
+@keyframes cs-toast-in {
+    from { transform: translateX(30px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@media (max-width: 560px) {
+    .cs-modal { max-width: 100%; }
+    .cs-modal .form-row { grid-template-columns: 1fr; }
+    #cs-toast-stack { left: 12px; right: 12px; max-width: none; }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox Chat - CampusShare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+
+    <header class="chat-navbar">
+        <div class="logo" onclick="window.location.href='marketplace.html'" style="cursor: pointer;">Campus<span>Share</span></div>
+        <button class="btn-exit" onclick="window.location.href='marketplace.html'">✕ Close Chat</button>
+    </header>
+
+    <main class="chat-workspace">
+        
+        <aside class="chat-sidebar-users">
+            <div class="sidebar-header-title">Messages</div>
+            <div style="padding: 10px 15px; border-bottom: 1px solid #e2e8f0;">
+                <input type="text" id="conversationSearch" placeholder="Search conversations..."
+                    style="width:100%; padding:8px 12px; border:1.5px solid #cbd5e0; border-radius:6px; outline:none; font-size:0.9rem;">
+            </div>
+            <div class="users-list-stack" id="conversationsList">
+                <p style="padding:15px 20px; color:#718096; font-size:0.9rem;">Loading conversations...</p>
+            </div>
+        </aside>
+
+        <section class="chat-main-window">
+            
+            <div class="chat-window-header" id="chatWindowHeader" style="display:none;">
+                <span class="active-indicator-dot" id="onlineDot" style="background:#cbd5e0;"></span>
+                <div>
+                    <h3 id="activeChatterHeaderName">Select a conversation</h3>
+                    <p id="activeChatterListing" style="font-size:0.78rem; color:#718096;"></p>
+                </div>
+            </div>
+
+            <div class="chat-messages-stream-container" id="chatMessageStream">
+                <p style="text-align:center; color:#a0aec0; margin-top:40px;">Select a conversation from the left to start chatting.</p>
+            </div>
+
+            <form class="chat-input-row-form" id="chatInputForm" style="display:none;">
+                <input type="text" id="typeMsgBox" placeholder="Type message or negotiation counter offer..." autocomplete="off" required>
+                <button type="submit" class="btn-send-message">Send 🚀</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>

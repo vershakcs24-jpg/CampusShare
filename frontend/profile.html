@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - CampusShare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+
+    <header class="profile-navbar">
+        <div class="logo" onclick="window.location.href='marketplace.html'" style="cursor: pointer;">Campus<span>Share</span></div>
+        <button class="btn-home" onclick="window.location.href='marketplace.html'">🏠 Back to Marketplace</button>
+    </header>
+
+    <div class="profile-layout-container">
+        
+        <aside class="profile-sidebar">
+            <div class="user-card-main">
+                <div class="avatar-large" id="avatarLarge">👤</div>
+                <h2 id="userName">Loading...</h2>
+                <p class="user-email" id="userEmail"></p>
+                <p class="user-meta" id="userMeta"></p>
+                <p class="user-meta" id="userHostel" style="font-weight:400; color:#718096; font-size:0.85rem;"></p>
+                <p class="user-meta" id="userPhone" style="font-weight:400; color:#718096; font-size:0.85rem;"></p>
+                <p class="user-meta" id="userBio" style="font-weight:400; color:#718096; font-size:0.85rem; margin-top:6px;"></p>
+            </div>
+
+            <div class="stats-panel">
+                <h3>Dashboard Stats</h3>
+                <div class="stats-grid">
+                    <div class="stat-item"><strong id="statListed">0</strong><span>Listed</span></div>
+                    <div class="stat-item"><strong id="statSold">0</strong><span>Sold</span></div>
+                    <div class="stat-item"><strong id="statWishlist">0</strong><span>Wishlist</span></div>
+                    <div class="stat-item"><strong id="statMessages">0</strong><span>Messages</span></div>
+                </div>
+            </div>
+
+            <div class="profile-actions-stack">
+                <button class="btn-action" id="btnEditProfile">✏️ Edit Profile</button>
+                <button class="btn-action" id="btnChangePassword">🔒 Change Password</button>
+                <button class="btn-logout" id="btnLogout">🚪 Logout</button>
+            </div>
+        </aside>
+
+        <main class="profile-content-area">
+            
+            <section class="content-section">
+                <h2>📦 My Listings</h2>
+                <div class="profile-grid" id="myListingsGrid">
+                    <p style="color:#718096;">Loading your listings...</p>
+                </div>
+            </section>
+
+            <section class="content-section" style="margin-top: 40px;">
+                <h2>❤️ My Wishlist</h2>
+                <div class="profile-grid" id="wishlistGrid">
+                    <p style="color:#718096;">Loading your wishlist...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

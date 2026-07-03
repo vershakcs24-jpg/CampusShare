@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #102a43;
+}
+
+.logo span {
+    color: #319795;
+}
+
+.btn-primary {
+    background-color: #2b6cb0;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    font-size: 1.0rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(43, 108, 176, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1a446c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(43, 108, 176, 0.3);
+}
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    align-items: center;
+    gap: 60px;
+    padding: 90px 8%;
+    background-color: #f4f7fb;
+    min-height: calc(90vh - 80px);
+}
+
+.hero-text {
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-text h1 {
+    font-size: 3.4rem;
+    color: #102a43;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.15;
+    margin-bottom: 30px;
+}
+
+.hero-text h1 span {
+    color: #319795;
+}
+
+.hero-text h2 {
+    font-size: 1.6rem;
+    color: #334e68;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 22px;
+}
+
+.hero-text h2 span {
+    color: #319795;
+}
+
+.hero-text p {
+    font-size: 1.05rem;
+    color: #627d98;
+    max-width: 460px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(16, 42, 67, 0.12);
+    cursor: pointer;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    object-fit: cover;
+    display: block;
+
+   
+    opacity: 0.88;           
+    filter: brightness(0.95) saturate(1.05);
+    transform: scale(1);
+
+ 
+    transition: transform 0.6s ease,
+                opacity 0.6s ease,
+                filter 0.6s ease;
+}
+
+
+.hero-image:hover img {
+    transform: scale(1.08);           
+    opacity: 1;                       
+    filter: brightness(1.05) saturate(1.15);
+}
+
+
+.features-section {
+    padding: 80px 8%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 2.2rem;
+    color: #102a43;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.features-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #319795;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+.features-section > p {
+    color: #627d98;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.feature-card {
+    background: #f8f9fa;
+    padding: 40px 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #2b6cb0, #319795);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    color: #102a43;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #486581;
+    font-size: 0.95rem;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 900px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 60px 6%;
+    }
+
+    .hero-text p {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .hero-image {
+        min-height: 320px;
+    }
+
+    .hero-image img {
+        min-height: 320px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.6rem;
+    }
+}

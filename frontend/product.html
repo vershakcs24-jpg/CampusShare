@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - CampusShare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+
+    <header class="product-navbar">
+        <div class="logo" onclick="window.location.href='marketplace.html'" style="cursor: pointer;">Campus<span>Share</span></div>
+        <button class="btn-back" onclick="window.location.href='marketplace.html'">← Back to Marketplace</button>
+    </header>
+
+    <main class="product-container">
+        <div class="product-layout">
+            
+            <div class="product-images-section">
+                <div class="main-image-box" id="mainImageBox">📦</div>
+                <div class="thumbnails-row" id="thumbnailsRow"></div>
+            </div>
+
+            <div class="product-meta-section">
+                
+                <div class="details-box">
+                    <h1 id="prodName">Scientific Calculator</h1>
+                    <div class="prod-price" id="prodPrice">₹650</div>
+                    
+                    <p class="meta-line"><strong>Category:</strong> <span id="prodCategory">Electronics</span></p>
+                    <p class="meta-line"><strong>Condition:</strong> <span id="prodCondition">Used</span></p>
+                    
+                    <div class="prod-description">
+                        <h3>Description:</h3>
+                        <p id="prodDesc">Casio fx-991ES Plus<br>Used for one semester.<br>Works perfectly.</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p>📅 <strong>Date Posted:</strong> 2 days ago</p>
+                    <p>📍 <strong>Campus Location:</strong> Hostel 7, NITJ</p>
+                    <p>🟢 <strong>Item Availability:</strong> In Stock</p>
+                </div>
+
+                <div class="seller-box">
+                    <h3>Seller Details</h3>
+                    <div class="seller-info">
+                        <div class="seller-avatar" id="sellerAvatar">👤</div>
+                        <div>
+                            <h4 id="sellerName">Rahul Sharma</h4>
+                            <p id="sellerDept">CSE 2nd Year</p>
+                            <p class="seller-rating">⭐⭐⭐⭐⭐ <span class="verified-tag">✓ Verified Student</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actions-box">
+                    <button class="btn-chat" id="btnChat">💬 Chat with Seller</button>
+                    <button class="btn-wishlist" id="btnWishlist">❤️ Add to Wishlist</button>
+                    <button class="btn-share" id="btnShare">🔗 Share Product</button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <section class="similar-products" id="similarSection" style="display:none;">
+        <h2>Similar Products You May Like</h2>
+        <div class="similar-grid" id="similarGrid"></div>
+    </section>
+
+    <script src="js/api.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusShare - NITJ Resource Hub</title>
+    <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Campus<span>Share</span></div>
+        <nav>
+            <button class="btn-primary" id="getStartedNav">Get Started</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Buy. Sell. Share.<br><span>Repeat.</span></h1>
+            <h2>Everything You Need,<br>Already on <span>Campus</span>.</h2>
+            <p>Buy second-hand essentials, sell unused items, borrow what you need, and help make campus life affordable for everyone.</p>
+        </div>
+        <div class="hero-image">
+            <!-- Replace src below with your own image -->
+            <img src="images/Mainimage.png" alt="NITJ Campus">
+        </div>
+    </section>
+
+    <!-- Boxes / Info Section -->
+    <section class="features-section">
+        <h2>What You Can Do</h2>
+        <p>A smart ecosystem designed exclusively for the needs of NITJ students.</p>
+
+        <div class="features-grid">
+            <!-- Box 1 -->
+            <div class="feature-card">
+                <span class="feature-icon">📚</span>
+                <h3>Academic Resources</h3>
+                <p>Making academic resources accessible to every student.
+                    Share, exchange, and grow together on campus.</p>
+            </div>
+            <!-- Box 2 -->
+            <div class="feature-card">
+                <span class="feature-icon">👕</span>
+                <h3>Campus Styles</h3>
+                <p>Have traditional wear for tech fests or extra jackets you don't wear? Share, rent, or trade with hostel mates easily.</p>
+            </div>
+            <!-- Box 3 -->
+            <div class="feature-card">
+                <span class="feature-icon">💬</span>
+                <h3>Instant Chat</h3>
+                <p>Chat instantly with buyers and sellers.
+                    Negotiate prices and plan meetups with ease..</p>
+            </div>
+            <!-- Box 4 -->
+            <div class="feature-card">
+                <span class="feature-icon">🛡️</span>
+                <h3>Trusted Community</h3>
+                <p>Only verified college email accounts can join, ensuring every interaction is safe, authentic, and reliable.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/api.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const getStartedNav = document.getElementById("getStartedNav");
+
+            if (getStartedNav) {
+                getStartedNav.addEventListener("click", () => {
+                    window.location.href = Auth.isLoggedIn() ? "marketplace.html" : "auth.html";
+                });
+            }
+        });
+    </script>
+</body>
+</html>

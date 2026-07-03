@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - CampusShare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/marketplace.css">
+</head>
+<body>
+
+    <header class="market-navbar">
+        <div class="logo">Campus<span>Share</span></div>
+        <div class="search-bar-container">
+            <input type="text" id="searchBar" placeholder="Search for books, electronics, cycles...">
+        </div>
+        <div class="nav-actions">
+            <button class="btn-sell" onclick="window.location.href='add-product.html'">+ Sell Item</button>
+            <div class="profile-icon" onclick="window.location.href='chat.html'" title="Messages" style="position:relative;">
+                💬
+                <span id="unreadBadge" class="unread-badge hidden">0</span>
+            </div>
+            <div class="profile-icon" id="navProfileIcon" onclick="window.location.href='profile.html'" title="My Profile">👤</div>
+        </div>
+    </header>
+
+    <div class="marketplace-layout">
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <ul class="category-list">
+                <li class="category-item active" data-category="all">All Items</li>
+                <li class="category-item" data-category="notebooks">📚 Notebooks & Books</li>
+                <li class="category-item" data-category="electronics">⚡ Electronics & Calculators</li>
+                <li class="category-item" data-category="clothes">👕 Apparel & Uniforms</li>
+                <li class="category-item" data-category="others">📦 Other Essentials</li>
+            </ul>
+        </aside>
+
+        <main class="products-section">
+            <h2>Available Listings</h2>
+            <div class="products-grid" id="productsGrid">
+                </div>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/marketplace.js"></script>
+</body>
+</html>

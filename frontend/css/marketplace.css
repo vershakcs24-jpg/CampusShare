@@ -1,0 +1,242 @@
+
+body {
+    background-color: #f0f7fc;
+    color: #16324a;
+}
+.logo { font-size: 1.6rem; font-weight: 700; color: #16324a; }
+.logo span { color: #2f8fdb; }
+
+.market-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(30, 90, 140, 0.07);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.search-bar-container {
+    flex: 0 1 500px;
+}
+
+.search-bar-container input {
+    width: 100%;
+    padding: 10px 16px;
+    border: 1.5px solid black;
+    border-radius: 20px;
+    outline: none;
+    font-size: 0.95rem;
+    background-color: #f0f7fc;
+    color: #16324a;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.search-bar-container input:focus {
+    border-color: #2f8fdb;
+    background-color: #ffffff;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-sell {
+    background-color:  #16324a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 4px 10px rgba(47, 143, 219, 0.28);
+}
+
+.btn-sell:hover {
+    background-color: #2472ad;
+}
+
+.profile-icon {
+    font-size: 1.4rem;
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf3fb;
+    color: #3d6683;
+    font-weight: 700;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid #d9e9f5;
+}
+
+.unread-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background: #e53e3e;
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 999px;
+    line-height: 1.4;
+}
+
+.unread-badge.hidden {
+    display: none;
+}
+
+
+.marketplace-layout {
+    display: flex;
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 5%;
+    gap: 30px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar {
+    flex: 0 0 240px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    height: fit-content;
+    box-shadow: 0 8px 24px rgba(30, 90, 140, 0.06);
+    border: 1px solid #e5f0fa;
+}
+
+.sidebar h3 {
+    color: #16324a;
+    margin-bottom: 15px;
+}
+
+.category-list {
+    list-style: none;
+}
+
+.category-item {
+    padding: 12px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #5b7a92;
+    margin-bottom: 5px;
+    transition: all 0.2s;
+}
+
+.category-item:hover {
+    background-color: #eaf3fb;
+    color: #2472ad;
+    font-weight: 600;
+}
+
+.category-item.active {
+    background-color: #0e304c;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+
+.products-section {
+    flex: 1;
+}
+
+.products-section h2 {
+    margin-bottom: 20px;
+    color: #16324a;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(30, 90, 140, 0.06);
+    border: 1px solid #e5f0fa;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 30px rgba(30, 90, 140, 0.14);
+}
+
+.product-img {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #eaf3fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a9c3d6;
+    font-size: 3rem;
+    overflow: hidden;
+}
+
+.new-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #2f8fdb;
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 3px 9px;
+    border-radius: 999px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #16324a;
+    margin-bottom: 5px;
+}
+
+.product-title {
+    font-size: 1rem;
+    color: #3d6683;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    background: #eaf3fb;
+    color: #3d6683;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-weight: 600;
+}
